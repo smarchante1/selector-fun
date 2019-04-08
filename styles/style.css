@@ -1,60 +1,102 @@
 /*Without changing anything in the html, add the following styles using advanced selectors*/
-
-
 /* Give the header element a background color */
-
-
 /* Center everything in the header and footer */
-
-
 /* All text to Helvetica */
-
-
 /* All links default color is gray*/
-
-
 /* All links on hover color red*/
-
-
-/* All Links visted color black*/
-
-
 /* Footer disclaimer text to be .5 em*/
-
-
 /* Remove bullet points from header navigation links */
-
-
 /* All Post's Comment Links Italicized, Orange and Remove the Underline */
-
-
 /* All Post's Comment Links Show Underline on Hover */
-
-
 /* All Post's Author's Links Bold and Blue, with no Underline */
-
-
 /* Article Paragraph Text should have line height of 200% */
-
-
 /* The First Letter of each Article be 2em */
-
-
 /* The First Image in every Article should have Rounded Corners*/
-
-
 /* The First Top Cat Section (check the bottom of the HTML file) should have a Golden Background */
-
-
 /* The 2nd Top Cat Section Should have a Silver/gray Background */
-
 /* The 3rd-Most Top Cat Should have a Bronze/brown Background
    Note: the HTML for this one is a little odd! This is intentional! */
-
 /* Every other Article's Post-Content Background Color to a Light Grey */
-
-
 /* All Top Kitten's Profile Photos Rounded */
+
+header{
+  background-color: aquamarine;
+  text-align: center;
+}
+
+footer{
+    background-color: aquamarine;
+    text-align: center;
+    font-size: .5em;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif
+}
+
+a{  
+  color: gray;
+}
+
+a:hover{
+  color:red;
+}
+
+a:visited{
+  color: black; 
+}
+
+li{
+  list-style-type: none;
+}
+
+a[href="#comments"] {
+  font-style: italic;
+  color: orange;
+  text-decoration: none;
+}
+
+a[href="#comments"]:hover {
+  text-decoration: underline;
+}
+
+article a[href*="#"]:not([href="#comments"]) { 
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+article p {
+  line-height: 200%;
+}
+
+article::first-letter {
+  font-size: 2em;
+}
+
+article img:first-of-type {
+  border-radius: 20px;
+}
+
+aside section:first-of-type {
+  background-color: gold;
+}
+
+aside section:nth-of-type(2n) {
+  background-color: silver;
+}
+
+section:not(.post-content) {
+  background-color:brown;
+}
+
+article:nth-of-type(2n+1) {
+  background-color: lightgray;
+}
+
+aside img, section:not(.post-content) img  {
+  border-radius: 20px;
+}
 
 
 /*** BONUS ***/
